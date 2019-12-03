@@ -5,7 +5,12 @@ services:
 
 language: python
 
+addons:
+  sonarcloud:
+    organization: "abhinit06" # the key of the org you chose at step #3
+
 script:
+  - sonar-scanner
   - python -m pytest -v
 
 after_success:
